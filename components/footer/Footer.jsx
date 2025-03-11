@@ -44,11 +44,11 @@ export default function Footer() {
       <div>
         <p className='text-[#00000099]'>Shop.co © 2000-2023, All Rights Reserved</p>
         <div>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <img src="/cards/Visa.png" alt="VisaCard" />
+          <img src="/cards/Mastercard.png" alt="MasterCard" />
+          <img src="/cards/PayPal.png" alt="PayPalCard" />
+          <img src="/cards/Pay.png" alt="PayCard" />
+          <img src="/cards/GooglePay.png" alt="GooglePayCard" />
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 "use client"
 import { Search } from '@mui/icons-material'
-import React from 'react'
+ 
 
 export default function SearchBar() {
     return (

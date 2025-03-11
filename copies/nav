@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 import Search from '../search/Search'
 import { AccountCircleOutlined, ShoppingCartOutlined } from '@mui/icons-material'
 import Link from 'next/link'

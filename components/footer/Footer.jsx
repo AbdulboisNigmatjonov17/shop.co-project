@@ -3,7 +3,7 @@ import { FooterData } from '@/helpers/FooterData'
 import { FacebookOutlined, GitHub, Instagram, Twitter } from '@mui/icons-material'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+ 
 import Form from './Form'
 
 export default function Footer() {

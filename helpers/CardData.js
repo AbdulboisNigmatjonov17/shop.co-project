@@ -5,6 +5,7 @@ export const CardData = [
         star: 4.5,
         img: { main: '/cards-img/card1/main.png', back: '/cards-img/card1/back.png', view: '/cards-img/card1/overview.png' },
         price: 260,
+        new_arrival: false,
         discount: true,
         discount_price: 300,
         about: 'A stylish and comfortable graphic t-shirt perfect for casual outings or layering under jackets.',
@@ -16,7 +17,7 @@ export const CardData = [
     },
     {
         id: 2,
-        title: 'Urban Street Hoodie',
+        title: 'Gradient Graphic T-shirt',
         star: 4.8,
         img: { main: '', back: '', view: '' },
         price: 450,
@@ -31,7 +32,7 @@ export const CardData = [
     },
     {
         id: 3,
-        title: 'Classic Denim Jacket',
+        title: 'Polo with Tipping Details',
         star: 4.6,
         img: { main: '', back: '', view: '' },
         price: 550,
@@ -46,7 +47,7 @@ export const CardData = [
     },
     {
         id: 4,
-        title: 'Retro Style Sneakers',
+        title: 'Black Striped T-shirt',
         star: 4.7,
         img: { main: '', back: '', view: '' },
         price: 320,
@@ -61,7 +62,7 @@ export const CardData = [
     },
     {
         id: 5,
-        title: 'Premium Leather Belt',
+        title: 'SKINNY FIT JEANS',
         star: 4.3,
         img: { main: '', back: '', view: '' },
         price: 150,
@@ -76,7 +77,7 @@ export const CardData = [
     },
     {
         id: 6,
-        title: 'Casual Cargo Pants',
+        title: 'CHECKERED SHIRT',
         star: 4.4,
         img: { main: '', back: '', view: '' },
         price: 280,
@@ -91,7 +92,7 @@ export const CardData = [
     },
     {
         id: 7,
-        title: 'Vintage Sunglasses',
+        title: 'SLEEVE STRIPED T-SHIRT',
         star: 4.9,
         img: { main: '', back: '', view: '' },
         price: 120,
@@ -106,7 +107,7 @@ export const CardData = [
     },
     {
         id: 8,
-        title: 'Classic Wristwatch',
+        title: 'VERTICAL STRIPED SHIRT',
         star: 4.8,
         img: { main: '', back: '', view: '' },
         price: 650,
@@ -121,7 +122,7 @@ export const CardData = [
     },
     {
         id: 9,
-        title: 'Athletic Gym Bag',
+        title: 'COURAGE GRAPHIC T-SHIRT',
         star: 4.7,
         img: { main: '', back: '', view: '' },
         price: 220,
@@ -133,5 +134,20 @@ export const CardData = [
             second: { question: 'Is it waterproof?', answer: 'Yes, it is made from water-resistant fabric to protect your belongings from moisture.' },
             third: { question: 'Can it be used as a travel bag?', answer: 'Yes, its spacious design and durable straps make it an excellent option for short trips.' },
         }
-    }
+    },
+    {
+        id: 10,
+        title: 'LOOSE FIT BERMUDA SHORTS',
+        star: 4.7,
+        img: { main: '', back: '', view: '' },
+        price: 220,
+        discount: false,
+        discount_price: 0,
+        about: 'A durable and spacious gym bag with multiple compartments for organized storage.',
+        Faqs: {
+            first: { question: 'Does this bag have a shoe compartment?', answer: 'Yes, it features a separate ventilated compartment for shoes to keep other items fresh.' },
+            second: { question: 'Is it waterproof?', answer: 'Yes, it is made from water-resistant fabric to protect your belongings from moisture.' },
+            third: { question: 'Can it be used as a travel bag?', answer: 'Yes, its spacious design and durable straps make it an excellent option for short trips.' },
+        }
+    },
 ];

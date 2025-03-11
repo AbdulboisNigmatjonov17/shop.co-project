@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 
 export default function Logos() {
     const logos = [
@@ -24,7 +24,7 @@ export default function Logos() {
         },
     ]
     return (
-        <section className='w-full h-[125px] bg-black flex items-center'>
+        <section className='w-full h-[125px] bg-black flex items-center mb-10'>
             <div className='Container w-full flex justify-between items-center'>
                 {
                     logos.map((item) => (

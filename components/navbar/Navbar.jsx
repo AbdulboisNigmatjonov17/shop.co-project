@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
     return (
-        <nav className='Container h-[10dvh] flex justify-between items-center'>
+        <nav className='Container h-[10dvh] py-10 flex justify-between items-center'>
             <Link href={'/'}>
                 <img src="/SHOP.CO.svg" alt="logo" />
             </Link>

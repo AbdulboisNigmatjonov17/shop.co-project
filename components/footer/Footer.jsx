@@ -49,11 +49,11 @@ export default function Footer() {
       <div className='Container flex'>
         <p>Shop.co © 2000-2023, All Rights Reserved</p>
         <div>
-          {/* <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" /> */}
+          <Image width={45} height={30} src="/cards/Visa.png" alt="VisaCard" />
+          <Image width={45} height={30} src="/cards/Mastercard.png" alt="MasterCard" />
+          <Image width={45} height={30} src="/cards/PayPal.png" alt="PayPalCard" />
+          <Image width={45} height={30} src="/cards/Pay.png" alt="PayCard" />
+          <Image width={45} height={30} src="/cards/GooglePay.png" alt="GooglePayCard" />
         </div>
       </div>
     </footer>

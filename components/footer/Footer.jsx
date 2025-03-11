@@ -45,15 +45,15 @@ export default function Footer() {
           ))
         }
       </div>
-      <hr className='max-w-[1280px] mx-auto my-10 text-[#0000001A]' />
-      <div className='Container flex'>
+      <hr className='max-w-[1200px] mx-auto my-10 text-[#0000001A]' />
+      <div className='Container flex justify-between'>
         <p>Shop.co © 2000-2023, All Rights Reserved</p>
-        <div>
-          <Image width={45} height={30} src="/cards/Visa.png" alt="VisaCard" />
-          <Image width={45} height={30} src="/cards/Mastercard.png" alt="MasterCard" />
-          <Image width={45} height={30} src="/cards/PayPal.png" alt="PayPalCard" />
-          <Image width={45} height={30} src="/cards/Pay.png" alt="PayCard" />
-          <Image width={45} height={30} src="/cards/GooglePay.png" alt="GooglePayCard" />
+        <div className='flex gap-5'>
+          <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/Visa.png" alt="VisaCard" />
+          <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/Mastercard.png" alt="MasterCard" />
+          <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/PayPal.png" alt="PayPalCard" />
+          <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/Pay.png" alt="PayCard" />
+          <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/GooglePay.png" alt="GooglePayCard" />
         </div>
       </div>
     </footer>

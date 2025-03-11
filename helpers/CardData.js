@@ -3,7 +3,7 @@ export const CardData = [
         id: 1,
         title: 'One Life Graphic T-shirt',
         star: 4.5,
-        img: { main: '', back: '', view: '' },
+        img: { main: '/cards-img/card1/main.png', back: '/cards-img/card1/back.png', view: '/cards-img/card1/overview.png' },
         price: 260,
         discount: true,
         discount_price: 300,

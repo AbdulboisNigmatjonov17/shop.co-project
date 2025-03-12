@@ -7,6 +7,7 @@ export const CardData = [
         price: 260,
         new_arrival: false,
         discount: true,
+        discount_percent: 20,
         discount_price: 300,
         about: 'A stylish and comfortable graphic t-shirt perfect for casual outings or layering under jackets.',
         Faqs: {
@@ -37,6 +38,7 @@ export const CardData = [
         img: { main: '', back: '', view: '' },
         price: 550,
         discount: true,
+        discount_percent: 30,
         discount_price: 600,
         about: 'A timeless denim jacket that adds a stylish touch to any outfit, perfect for layering.',
         Faqs: {
@@ -67,6 +69,7 @@ export const CardData = [
         img: { main: '', back: '', view: '' },
         price: 150,
         discount: true,
+        discount_percent: 20,
         discount_price: 180,
         about: 'A sophisticated and durable leather belt that complements both formal and casual outfits.',
         Faqs: {
@@ -82,6 +85,7 @@ export const CardData = [
         img: { main: '', back: '', view: '' },
         price: 280,
         discount: true,
+        discount_percent: 20,
         discount_price: 310,
         about: 'Versatile and functional cargo pants with a modern fit and multiple storage pockets.',
         Faqs: {
@@ -127,6 +131,7 @@ export const CardData = [
         img: { main: '', back: '', view: '' },
         price: 220,
         discount: true,
+        discount_percent: 20,
         discount_price: 250,
         about: 'A durable and spacious gym bag with multiple compartments for organized storage.',
         Faqs: {

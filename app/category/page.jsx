@@ -7,7 +7,7 @@ export default function Category() {
     <>
       <hr className="Container text-[#0000001A]" />
       <BreadCrums />
-      <section className="Container flex gap-5">
+      <section className="Container flex gap-5 items-start">
         <Filter />
         <AllProducts />
       </section>

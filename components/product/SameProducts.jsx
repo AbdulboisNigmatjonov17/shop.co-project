@@ -8,7 +8,7 @@ export default function SameProducts({ text, data }) {
             <div className="flex justify-between gap-5">
                 <div className="flex flex-col gap-3.5">
                     <div className="overflow-hidden rounded-[20px]">
-                        <Image width={300} height={300} src="/cards-img/card1/main.png" className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
+                        <Image width={300} height={300} src="/cards-img/card1/main.png" priority className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <h3 className="font-bold text-xl">T-SHIRT WITH TAPE DETAILS</h3>
@@ -21,7 +21,7 @@ export default function SameProducts({ text, data }) {
                 </div>
                 <div className="flex flex-col gap-3.5">
                     <div className="overflow-hidden rounded-[20px]">
-                        <Image width={300} height={300} src="/cards-img/card1/main.png" className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
+                        <Image width={300} height={300} src="/cards-img/card1/main.png" priority className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <h3 className="font-bold text-xl">T-SHIRT WITH TAPE DETAILS</h3>
@@ -34,7 +34,7 @@ export default function SameProducts({ text, data }) {
                 </div>
                 <div className="flex flex-col gap-3.5">
                     <div className="overflow-hidden rounded-[20px]">
-                        <Image width={300} height={300} src="/cards-img/card1/main.png" className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
+                        <Image width={300} height={300} src="/cards-img/card1/main.png" priority className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <h3 className="font-bold text-xl">T-SHIRT WITH TAPE DETAILS</h3>
@@ -47,7 +47,7 @@ export default function SameProducts({ text, data }) {
                 </div>
                 <div className="flex flex-col gap-3.5">
                     <div className="overflow-hidden rounded-[20px]">
-                        <Image width={300} height={300} src="/cards-img/card1/main.png" className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
+                        <Image width={300} height={300} src="/cards-img/card1/main.png" priority className="cursor-pointer hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <h3 className="font-bold text-xl">T-SHIRT WITH TAPE DETAILS</h3>
@@ -63,9 +63,11 @@ export default function SameProducts({ text, data }) {
                     </div>
                 </div>
             </div>
-            <Link href={'/category'} className="w-full flex justify-center items-center">
-                <button className="w-[220px] h-[52px] rounded-[62px] cursor-pointer bg-white text-black hover:bg-black hover:text-white transition duration-300 ease-in-out border border-[#0000001A] my-10">View All</button>
-            </Link>
+            <div className="w-full flex justify-center items-center">
+                <Link href={'/category'}>
+                    <button className="w-[220px] h-[52px] rounded-[62px] cursor-pointer bg-white text-black hover:bg-black hover:text-white transition duration-300 ease-in-out border border-[#0000001A] my-10">View All</button>
+                </Link>
+            </div>
         </section>
     )
 }

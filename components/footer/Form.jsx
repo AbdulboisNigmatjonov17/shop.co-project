@@ -10,7 +10,7 @@ export default function Form() {
                     <MailOutline />
                     <input type="text" placeholder='Enter your email address' className='outline-none font-normal text-[16px] w-full pr-2' />
                 </form>
-                <button className='w-full h-[52px] rounded-[62px] cursor-pointer bg-white text-black hover:bg-black hover:text-white transition duration-300 ease-in-out'>Subscribe to Newsletter</button>
+                <button className='w-full h-[52px] rounded-[62px] cursor-pointer bg-white text-black hover:bg-black hover:text-white hover:border hover:border-white transition duration-300 ease-in-out'>Subscribe to Newsletter</button>
             </div>
         </section>
     )

@@ -3,13 +3,24 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function ProductDard({ data }) {
-    // console.log(data);
-
     return (
         <div className="flex flex-col gap-3.5">
-            <Link href={`/product-detail/${data.id}`} className="w-[300px] h-[300px] overflow-hidden rounded-[20px]">
+            {/* <Link href={`/product-detail/${data.id}`} className="w-[300px] h-[300px] overflow-hidden rounded-[20px]">
                 <Image width={300} height={300} src={data.img.main} className="cursor-pointer object-cover hover:scale-110 transition duration-200 ease-in-out" alt="card-img" />
+            </Link> */}
+            <Link href={`/product-detail/${data.id}`} className="w-[300px] h-[300px] overflow-hidden rounded-[20px] block">
+                <div className="w-full h-full cursor-pointer overflow-hidden rounded-[20px]">
+                    <Image
+                        width={300}
+                        height={300}
+                        src={data.img.main}
+                        alt="card-img"
+                        priority
+                        className="object-cover w-full h-full hover:scale-110 transition duration-200 ease-in-out"
+                    />
+                </div>
             </Link>
+
             <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-xl">{data.title}</h3>
                 <div className="flex gap-3">

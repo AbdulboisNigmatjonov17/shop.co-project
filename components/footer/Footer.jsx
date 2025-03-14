@@ -3,7 +3,7 @@ import { FooterData } from '@/helpers/FooterData'
 import { FacebookOutlined, GitHub, Instagram, Twitter } from '@mui/icons-material'
 import Image from 'next/image'
 import Link from 'next/link'
- 
+
 import Form from './Form'
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
         <Form />
         <div className='w-[250px] h-full flex flex-col justify-between gap-10'>
           <Link href={'/'}>
-            <Image width={165} height={25} src="/SHOP.CO.svg" alt="Logo" />
+            <Image width={165} priority height={25} src="/SHOP.CO.svg" alt="Logo" />
           </Link>
           <p>
             We have clothes that suits your style and which you’re proud to wear. From women to men.

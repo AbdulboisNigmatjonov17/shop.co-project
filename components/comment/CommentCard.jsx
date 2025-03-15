@@ -32,7 +32,7 @@ export default function CommentCard({ comment }) {
             )}
             <div className='w-full flex flex-col gap-3 items-start'>
                 <h3 className='flex gap-2'>UserName <span className='w-[24px] h-[24px] flex items-center justify-center bg-green-500 text-white rounded-full'><Done fontSize='small' /></span></h3>
-                <p className=''>{comment.text}</p>
+                <p className=''>{comment.title}</p>
                 {/* <p>{new Date().getDate()} {new Date().getFullYear}</p> */}
                 <p>Posted on {formattedDate}</p>
             </div>

@@ -32,32 +32,19 @@ export default function Detail() {
     { id: 3, color: "bg-[#31344F]" },
   ]
   const sizes = [
-    {
-      id: 1,
-      text: 'Small'
-    },
-    {
-      id: 2,
-      text: 'Medium'
-    },
-    {
-      id: 3,
-      text: 'Large'
-    },
-    {
-      id: 4,
-      text: 'X-Large'
-    },
+    { id: 1, text: 'Small' },
+    { id: 2, text: 'Medium' },
+    { id: 3, text: 'Large' },
+    { id: 4, text: 'X-Large' },
   ]
   return (
     <section>
       <hr className="Container text-[#0000001A]" />
       <Breadcrumbs />
-      {/* <p>Param ID: {param}</p> */}
       {card ? (
         <div className="Container">
           <div className="w-full flex justify-between gap-10">
-            {/* <div className="w-[50%] flex gap-3.5">
+            <div className="w-[50%] flex gap-3.5">
               <div className="flex flex-col gap-3.5">
                 <button onClick={() => handleChangeImg(card.img.main)} className="cursor-pointer">
                   <Image width={150} height={170} src={card.img.main} alt="product image main" />
@@ -70,9 +57,15 @@ export default function Detail() {
                 </button>
               </div>
               <div className="rounded-[20px] overflow-hidden">
-                <Image width={444} height={530} src={img} alt="product image" className="object-cover" />
+                {
+                  img ?
+                    <Image width={444} height={530} src={img} alt="product image" className="object-cover" />
+                    : <div className="bg-[#F0F0F0] w-[444px] h-[530px] flex justify-center items-center">
+                      <h2 className="text-2xl font-semibold">Select one</h2>
+                    </div>
+                }
               </div>
-            </div> */}
+            </div>
             <div className="w-[50%] flex flex-col gap-5">
               <h2>{card.title}</h2>
               <h4>{card.star}/5</h4>
@@ -133,7 +126,7 @@ export default function Detail() {
         <p>Product not found</p>
       )}
       <div className="Container">
-        <Details data={card}/>
+        <Details data={card} />
       </div>
       <SameProducts text={'You might also like'} />
     </section>

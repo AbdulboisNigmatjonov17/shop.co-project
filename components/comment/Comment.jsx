@@ -76,7 +76,7 @@ export default function Comment() {
             {/* Commentlar ro‘yxati */}
             <div className="w-full mt-5 grid grid-cols-2 gap-5">
                 {(showAll ? comments : comments.slice(0, 4)).map((comment) => (
-                    <CommentCard key={comment.id} text={comment} />
+                    <CommentCard key={comment.id} comment={comment} />
                 ))}
             </div>
 

@@ -8,7 +8,7 @@ import Form from './Form'
 
 export default function Footer() {
   return (
-    <footer className='bg-[#F0F0F0] pt-40 pb-10 mt-20 text-[#00000099]'>
+    <footer className='w-full bg-[#F0F0F0] pt-40 pb-10 mt-20 text-[#00000099]'>
       <div className='Container min-h-[175px] flex flex-wrap justify-between relative '>
         <Form />
         <div className='w-[250px] h-full flex flex-col justify-between gap-10'>

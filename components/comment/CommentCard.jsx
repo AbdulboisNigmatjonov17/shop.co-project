@@ -16,7 +16,7 @@ export default function CommentCard({ comment }) {
         setShowMenu(false); // O‘chirgandan keyin menyuni yopamiz
     };
     return (
-        <div className='relative border border-[#0000001A] rounded-[20px] max-w-[610px] min-h-[200px] py-7 px-8 flex flex-col justify-between'>
+        <div className='relative border border-[#0000001A] rounded-[20px] max-w-[610px] min-h-[200px] py-7 px-8 flex flex-col justify-between ml-5'>
             <div className='w-full flex justify-between'>
                 <StarRating />
                 <button onClick={() => setShowMenu(!showMenu)}>
@@ -24,15 +24,15 @@ export default function CommentCard({ comment }) {
                 </button>
             </div>
             {showMenu && (
-                <div className="absolute right-0 top-7 mt-2 bg-white border shadow-md rounded-md">
-                    <button onClick={handleDelete} className="block px-4 py-2 text-red-600 hover:bg-gray-100">
+                <div className="absolute right-5 top-10 mt-2 bg-white border shadow-md rounded-md">
+                    <button onClick={handleDelete} className="cursor-pointer w-[100px] h-[40px] bg-black text-white border border-[#00000099] hover:bg-white hover:text-black transition duration-300 ease-in-out">
                         Delete
                     </button>
                 </div>
             )}
             <div className='w-full flex flex-col gap-3 items-start'>
-                <h3 className='flex gap-2'>UserName <span className='w-[24px] h-[24px] flex items-center justify-center bg-green-500 text-white rounded-full'><Done fontSize='small' /></span></h3>
-                <p className=''>{comment.comment}</p>
+                <h3 className='flex gap-2 font-bold text-xl'>UserName <span className='w-[24px] h-[24px] flex items-center justify-center bg-green-500 text-white rounded-full'><Done fontSize='small' /></span></h3>
+                <p className='text-[#00000099]'>"{comment.comment}"</p>
                 <p>Posted on {formattedDate}</p>
             </div>
         </div>

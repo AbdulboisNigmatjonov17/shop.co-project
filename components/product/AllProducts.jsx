@@ -20,8 +20,6 @@ export default function AllProducts() {
             <div className='w-full grid grid-cols-3 justify-between gap-9'>
                 {
                     CardData.map((item) => {
-                        console.log(item);
-
                         return (
                             <ProductDard key={item.id} data={item} />
                         )

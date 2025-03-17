@@ -20,6 +20,7 @@ export default function Navbar() {
                 <Link href={'/cart'}>
                     <ShoppingCartOutlined className='cursor-pointer hover:scale-125' />
                 </Link>
+                {/*  */}
                 <AccountCircleOutlined className='cursor-pointer hover:scale-125' />
             </div>
         </nav>

@@ -4,14 +4,13 @@ import React from 'react'
 
 export default function Cart() {
   return (
-<<<<<<< HEAD
-    <div>Cart</div> 
-=======
     <div>
-      <YourCards />
-      <Order />
+      <div>Cart</div>
+      <div className='w-full flex justify-between'>
+        {/* <YourCards /> */}
+        <Order />
+      </div>
     </div>
-    
->>>>>>> 31e6f4a835e48ad6321b2be15ac843f71b47f2e3
+
   )
 }

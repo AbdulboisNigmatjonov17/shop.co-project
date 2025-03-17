@@ -1,4 +1,4 @@
- 
+
 import Search from '../search/Search'
 import { AccountCircleOutlined, ShoppingCartOutlined } from '@mui/icons-material'
 import Link from 'next/link'
@@ -17,7 +17,9 @@ export default function Navbar() {
             </ul>
             <Search />
             <div className='flex gap-3.5'>
-                <ShoppingCartOutlined className='cursor-pointer hover:scale-125' />
+                <Link href={'/cart'}>
+                    <ShoppingCartOutlined className='cursor-pointer hover:scale-125' />
+                </Link>
                 <AccountCircleOutlined className='cursor-pointer hover:scale-125' />
             </div>
         </nav>

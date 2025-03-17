@@ -9,7 +9,7 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         setCart: (state, action) => {
-            state.cart = action.payload.slice(); // Clone qilish muhim
+            state.cart = action.payload.slice();
         },
         addToCart: (state, action) => {
             state.cart.push(action.payload);

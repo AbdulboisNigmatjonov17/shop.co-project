@@ -33,7 +33,7 @@ const cartItems = [
   },
 ];
 
-export default function ShoppingCart() {
+export default function ShoppingCart({ cart }) {
   const [items, setItems] = useState(cartItems);
   const [promoCode, setPromoCode] = useState('');
 
@@ -56,9 +56,10 @@ export default function ShoppingCart() {
 
   return (
     <Box
+      width={1200}
       display="flex"
       gap={4}
-      justifyContent="center"
+      justifyContent="space-between"
       p={3}
     >
       {/* Left - Shopping Cart List */}

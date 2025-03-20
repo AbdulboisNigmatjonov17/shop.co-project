@@ -1,21 +1,41 @@
-"use client"
-import Order from '@/components/Summary/Order'
-// import YourCards from '@/components/your-cards/YourCards'
-import React from 'react'
-import { useSelector } from 'react-redux';
+"use client";
+import ShoppingCart from "@/components/Summary/ShoppingCart";
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setCart } from "@/features/CartSlice";
+import { CardData } from "@/helpers/CardData";
 
 export default function Cart() {
   const cart = useSelector((state) => state.cart.cart);
-  console.log("obj" + cart); // Savatchadagi mahsulotlarni tekshirish uchun
+  const dispatch = useDispatch();
+  const [filteredCart, setFilteredCart] = useState([]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savedCart = localStorage.getItem("cart");
+      if (savedCart) {
+        dispatch(setCart(JSON.parse(savedCart)));
+      }
+    }
+  }, [dispatch]);
+
+  useEffect(() => {
+    // `cart` dagi mahsulotlarni `CardData` bilan id bo‘yicha solishtirish
+    const updatedCart = cart
+      .map((item) => {
+        const product = CardData.find((p) => p.id === item.id);
+        return product ? { ...product, quantity: item.quantity } : null;
+      })
+      .filter(Boolean); // `null` bo'lgan mahsulotlarni o‘chirib tashlash
+
+    setFilteredCart(updatedCart);
+  }, [cart]);
 
   return (
     <div>
-      <div>Cart</div>
-      <div className='Container flex justify-between'>
-        {/* <YourCards /> */}
-        <Order cart={cart}/>
+      <div className="Container flex justify-between">
+        <ShoppingCart cart={filteredCart} />
       </div>
     </div>
-
-  )
+  );
 }

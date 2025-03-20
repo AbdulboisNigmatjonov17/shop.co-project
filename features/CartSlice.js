@@ -1,9 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const getInitialCart = () => {
-    const savedCart = localStorage.getItem("cart");
-    return savedCart ? JSON.parse(savedCart) : [];
+    if (typeof window !== "undefined") {
+        const savedCart = localStorage.getItem("cart");
+        return savedCart ? JSON.parse(savedCart) : [];
+    }
+    return []; // SSR vaqtida bo'sh array qaytariladi
 };
+
 
 const initialState = {
     cart: getInitialCart(),
@@ -32,8 +36,23 @@ const cartSlice = createSlice({
             state.cart = state.cart.filter((item) => item.id !== action.payload);
             localStorage.setItem("cart", JSON.stringify(state.cart));
         },
+        updateQuantity: (state, action) => {
+            const { id, amount } = action.payload;
+            const existingItem = state.cart.find((item) => item.id === id);
+        
+            if (existingItem) {
+                existingItem.quantity += amount;
+        
+                // Quantity 1 dan kichik bo‘lsa, o‘chirib tashlash
+                if (existingItem.quantity < 1) {
+                    state.cart = state.cart.filter((item) => item.id !== id);
+                }
+            }
+        
+            localStorage.setItem("cart", JSON.stringify(state.cart));
+        },        
     },
 });
 
-export const { addToCart, removeFromCart, setCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, setCart, updateQuantity } = cartSlice.actions;
 export default cartSlice.reducer;

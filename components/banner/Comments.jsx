@@ -31,7 +31,7 @@ export default function Comments() {
     }, []);
 
     return (
-        <div className="w-full mx-10 mt-10 mb-32 flex flex-col gap-10 ">
+        <div className="w-full mt-10 mb-32 flex flex-col gap-10 ">
             <div className="Container flex justify-start">
                 <h2 className="font-bold text-5xl">OUR HAPPY CUSTOMERS</h2>
             </div>

@@ -62,7 +62,10 @@ Loyihada quyidagi texnologiyalar ishlatilgan:
 
 ## 📸 Screenshotlar
 
-*(Bu yerga loyihaning asosiy sahifalaridan screenshotlar qo‘shish mumkin)*
+<img src="/public/screens/home.png"/>
+<img src="/public/screens/product.png"/>
+<img src="/public/screens/category.png"/>
+<img src="/public/screens/cart.png"/>
 
 ---
 

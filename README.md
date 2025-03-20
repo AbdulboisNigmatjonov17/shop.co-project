@@ -62,10 +62,12 @@ Loyihada quyidagi texnologiyalar ishlatilgan:
 
 ## 📸 Screenshotlar
 
-<img src="/public/screens/home.png"/>
-<img src="/public/screens/product.png"/>
-<img src="/public/screens/category.png"/>
-<img src="/public/screens/cart.png"/>
+<div style="width: 100%; display: flex; justify-content: space-between; align-items: center; ">
+   <img src="/public/screens/home.png" style="width: 200px; height: 200px; object-fit: cover"/>
+   <img src="/public/screens/product.png"  style="width: 200px; height: 200px; object-fit: cover"/>
+   <img src="/public/screens/category.png"  style="width: 200px; height: 200px; object-fit: cover"/>
+   <img src="/public/screens/cart.png"  style="width: 200px; height: 200px; object-fit: cover"/>
+</div>
 
 ---
 

@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ShopCo Project
 
-## Getting Started
+ShopCo – bu Next.js asosida qurilgan zamonaviy e-commerce (onlayn do'kon) loyihasi. Loyiha React, Redux Toolkit, Firebase va Material-UI yordamida ishlab chiqilgan.
 
-First, run the development server:
+## 🚀 Texnologiyalar
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Loyihada quyidagi texnologiyalar ishlatilgan:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Frontend**
+- **Next.js** – React asosidagi full-stack framework
+- **React.js** – UI yaratish uchun kutubxona
+- **React DOM** – React komponentlarini browserda ishlatish uchun
+- **MUI (Material-UI)** – UI komponentlari to‘plami va iconlar uchun
+- **React Multi Carousel** – Slayder (carousel) yaratish uchun
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### **State Management**
+- **Redux** – Global state boshqarish uchun
+- **React Redux** – Redux’ni React bilan bog‘lash uchun
+- **Redux Toolkit** – Redux’ni optimallashtirish va osonroq ishlatish uchun
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Styling**
+- **Tailwind CSS** – Tezkor va moslashuvchan CSS framework
+- **Emotion (styled components)** – Dynamic CSS uchun
 
-## Learn More
+### **Backend xizmatlari**
+- **Firebase** – Commentlarni va ma’lumotlarni saqlash uchun
 
-To learn more about Next.js, take a look at the following resources:
+### **Development va ESLint**
+- **ESLint** – Kod sifatini nazorat qilish uchun
+- **@tailwindcss/postcss** – Tailwind CSS uchun konfiguratsiya
+- **eslint-config-next** – Next.js bilan ESLint ishlatish uchun
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 O'rnatish va ishga tushirish
 
-## Deploy on Vercel
+1. **Repository'ni clone qilish:**
+   ```bash
+   git clone https://github.com/AbdulboisNigmatjonov17/shop.co-project.git
+   cd shopco
+   ```
+2. **Kerakli kutubxonalarni o‘rnatish:**
+   ```bash
+   npm install
+   ```
+3. **Loyihani ishga tushirish:**
+   ```bash
+   npm run dev
+   ```
+4. **Brauzerda ochish:**
+   `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Asosiy Funksiyalar
+
+- 🛍️ **Mahsulotlarni ko‘rish** – Mahsulotlar ro‘yxati va tafsilotlari
+- ❤️ **Sevimlilarga qo‘shish** – Sevimli mahsulotlaringizni saqlash
+- 🛒 **Shopping Cart** – Savatga mahsulot qo‘shish va boshqarish
+
+---
+
+## 📸 Screenshotlar
+
+*(Bu yerga loyihaning asosiy sahifalaridan screenshotlar qo‘shish mumkin)*
+
+---
+
+## 🛠 Kelajakdagi Takomillashtirishlar
+
+- 📦 **To‘lov tizimi integratsiyasi** (Stripe yoki PayPal)
+- 🌎 **Ko‘p tilli qo‘llab-quvvatlash**
+- 📊 **Admin panel qo‘shish**
+- 🌙 **Dark Mode – light va dark mode ishlatish**
+
+---
+
+## 👨‍💻 Muallif
+
+Loyiha mualliflari: **Abdulbois Nigmatjonov va Ozodbek Yuldashev**
+
+Bog‘lanish uchun: ricoc2609@gmail.com
+
+😊 Loyihani yoqdimi brat? 🌟 Star bosing va o‘z hissangizni qo‘shing!
+

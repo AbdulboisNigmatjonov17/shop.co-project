@@ -37,7 +37,6 @@ Loyihada quyidagi texnologiyalar ishlatilgan:
 1. **Repository'ni clone qilish:**
    ```bash
    git clone https://github.com/AbdulboisNigmatjonov17/shop.co-project.git
-   cd shopco
    ```
 2. **Kerakli kutubxonalarni o‘rnatish:**
    ```bash

@@ -9,6 +9,8 @@ export const CardData = [
         discount: true,
         discount_percent: 20,
         discount_price: 300,
+        size: 'Large',
+        color: 'Green',
         about: 'A stylish and comfortable graphic t-shirt perfect for casual outings or layering under jackets.',
         Faqs: {
             first: { question: 'What material is this t-shirt made from?', answer: 'This t-shirt is made from 100% premium cotton, ensuring maximum comfort and breathability while maintaining durability.' },

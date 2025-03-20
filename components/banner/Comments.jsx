@@ -8,9 +8,9 @@ import CommentCard from "../comment/CommentCard";
 
 const responsive = {
     superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 4 },
-    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 4 },
-    tablet: { breakpoint: { max: 1024, min: 464 }, items: 3 },
-    mobile: { breakpoint: { max: 464, min: 0 }, items: 2 }
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
 };
 
 export default function Comments() {
@@ -31,8 +31,8 @@ export default function Comments() {
     }, []);
 
     return (
-        <div className="w-full mt-10 mb-32 flex flex-col gap-10 ">
-            <div className="Container flex justify-start">
+        <div className="w-full mt-10 mb-32 flex flex-col gap-10">
+            <div className="Container flex justify-start lg:px-0 px-5">
                 <h2 className="font-bold text-5xl">OUR HAPPY CUSTOMERS</h2>
             </div>
             <Carousel

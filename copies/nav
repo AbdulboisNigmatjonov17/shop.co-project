@@ -1,24 +1,59 @@
- 
+"use client"
 import Search from '../search/Search'
-import { AccountCircleOutlined, ShoppingCartOutlined } from '@mui/icons-material'
+import { AccountCircleOutlined, ExpandMore, ShoppingCartOutlined } from '@mui/icons-material'
 import Link from 'next/link'
+import { useState } from "react";
+import { Drawer, IconButton, List, ListItem, ListItemText, Menu } from "@mui/material";
 
 export default function Navbar() {
+    const [open, setOpen] = useState(false)
     return (
-        <nav className='Container h-[10dvh] flex justify-between items-center'>
+        <nav className='lg:max-w-[1200px] mx-auto w-full h-[10dvh] py-10 flex justify-between items-center gap-5 lg:gap-0'>
+            <div className='lg:hidden flex'>
+                <IconButton onClick={() => setOpen(true)} >
+                    <Menu fontSize="large" className='text-black'/>
+                </IconButton>
+            </div>
             <Link href={'/'}>
                 <img src="/SHOP.CO.svg" alt="logo" />
             </Link>
-            <ul className='flex items-center gap-6 cursor-pointer'>
-                <li className='cursor-pointer hover:font-semibold'>Shop</li>
+            <ul className='hidden lg:flex items-center gap-6 cursor-pointer'>
+                <Link href={'/category'}>
+                    <li className='cursor-pointer hover:font-semibold'>Shop <ExpandMore /> </li>
+                </Link>
                 <li className='cursor-pointer hover:font-semibold'>On Sale</li>
                 <li className='cursor-pointer hover:font-semibold'>New Arrivals</li>
                 <li className='cursor-pointer hover:font-semibold'>Brands</li>
             </ul>
             <Search />
             <div className='flex gap-3.5'>
-                <ShoppingCartOutlined fontSize='large' className='cursor-pointer hover:scale-110' />
-                <AccountCircleOutlined fontSize='large' className='cursor-pointer hover:scale-110' />
+                <Link href={'/cart'}>
+                    <ShoppingCartOutlined className='cursor-pointer hover:scale-125' />
+                </Link>
+                {/*  */}
+                <AccountCircleOutlined className='cursor-pointer hover:scale-125' />
+            </div>
+            <div className='lg:hidden flex'>
+                <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
+                    <List className={`w-60 h-full bg-[#F6F6F7] text-black`}>
+                        {[
+                            { text: "Shop", href: "/category" },
+                            { text: "On Sale", href: "/" },
+                            { text: "New Arrivals", href: "/" },
+                            { text: "Brands", href: "/" },
+                        ].map(({ text, href }, index) => (
+                            <ListItem
+                                key={index}
+                                className="hover:bg-[#e2e2e2]"
+                                onClick={() => setOpen(false)}
+                                component={Link}
+                                href={href}
+                            >
+                                <ListItemText primary={text} className="cursor-pointer" />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Drawer>
             </div>
         </nav>
     )

@@ -5,15 +5,15 @@ import Link from 'next/link'
 
 export default function HeroBanner() {
     return (
-        <section className='bg-[#F2F0F1] h-[660px] '>
-            <div className='Container h-full flex justify-between items-center overflow-hidden'>
-                <div className='w-[50%] h-full flex flex-col justify-center gap-5 my-auto'>
-                    <h1 className='font-bold text-[64px] leading-[64px]'>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+        <section className='w-full bg-[#F2F0F1] min-h-[660px]'>
+            <div className='Container h-full flex lg:flex-row flex-col justify-between items-center overflow-hidden lg:pb-0 pb-10'>
+                <div className='lg:w-[50%] w-full h-full flex flex-col justify-center gap-5 my-auto px-4 lg:pt-0 pt-10'>
+                    <h1 className='font-extrabold lg:text-6xl text-4xl'>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
                     <p className='text-[#00000099]'>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
                     <Link href={'/category'}>
-                        <Button text={'Shop Now'} style={'w-[210px]'} />
+                        <Button text={'Shop Now'} style={'lg:w-[210px] md:w-[210px] w-full'} />
                     </Link>
-                    <div className='w-full flex justify-between'>
+                    <div className='w-full flex lg:justify-between justify-center flex-wrap'>
                         <div>
                             <h2 className='font-bold text-[40px]'>200+</h2>
                             <p className='text-[#00000099] font-normal'>International Brands</p>
@@ -28,8 +28,8 @@ export default function HeroBanner() {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <Image width={600} height={660} src="/Hero.png" alt="Hero Image" className='object-cover' />
+                <div className='lg:w-[50%] w-full'>
+                    <Image width={600} height={660} src="/Hero.png" alt="Hero Image" className='object-cover' priority />
                 </div>
             </div>
         </section>

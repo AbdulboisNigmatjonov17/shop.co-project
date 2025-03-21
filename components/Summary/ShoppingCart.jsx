@@ -64,7 +64,7 @@ export default function ShoppingCart({ cart }) {
       </Box>
 
       {/* Order Summary */}
-      <Box p={3} bgcolor="white" borderRadius={2} boxShadow={3} minWidth={300}>
+      <Box p={3} bgcolor="white" borderRadius={2} maxHeight={'460px'} boxShadow={3} minWidth={300} display={'flex'} flexDirection={'column'} justifyContent={'space-between'}>
         <Typography variant="h6" fontWeight="bold">Order Summary</Typography>
         <Box display="flex" justifyContent="space-between" mt={2}>
           <Typography>Subtotal</Typography>

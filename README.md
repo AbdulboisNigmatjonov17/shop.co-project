@@ -1,6 +1,7 @@
 # ShopCo Project
 
-ShopCo – bu Next.js asosida qurilgan zamonaviy e-commerce (onlayn do'kon) loyihasi. Loyiha React, Redux Toolkit, Firebase va Material-UI yordamida ishlab chiqilgan.
+ShopCo – bu Next.js asosida qurilgan zamonaviy e-commerce (onlayn do'kon) loyihasi. Loyiha React, Redux Toolkit, Firebase va Material-UI yordamida ishlab chiqilgan. 
+https://shop-co-project-eight.vercel.app/
 
 ## 🚀 Texnologiyalar
 
@@ -29,6 +30,9 @@ Loyihada quyidagi texnologiyalar ishlatilgan:
 - **ESLint** – Kod sifatini nazorat qilish uchun
 - **@tailwindcss/postcss** – Tailwind CSS uchun konfiguratsiya
 - **eslint-config-next** – Next.js bilan ESLint ishlatish uchun
+
+### **Hosting*
+- **Vercel** - loyihani hosting qlishchun foydalandim
 
 ---
 

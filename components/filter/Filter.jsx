@@ -6,17 +6,26 @@ import Colors from "./Colors";
 import Sizes from "./Sizes";
 import Button from "../btn/Button";
 
-export default function Filter() {
+export default function Filter({ setOpenFilter, openFilter }) {
     const [openPrice, setOpenPrice] = useState(false);
     const [openColors, setOpenColors] = useState(false);
     const [openSizes, setOpenSizes] = useState(false);
     const [openDressStyle, setOpenDressStyle] = useState(false);
 
     return (
-        <div className="w-[20%] min-h-[700px] py-5 px-6 flex flex-col gap-6 rounded-[20px] border border-[#0000001A]">
+        // <div className={`md:w-[20%] w-full scroll-auto md:flex sm:max-h-[80vh] sm:overflow-y-auto min-h-[700px] py-5 px-6 flex-col gap-6 rounded-[20px] border border-[#0000001A] ${openFilter ? "flex" : "hidden"} md:flex`}>
+        <div className={`md:w-[20%] w-full md:flex md:max-h-full sm:max-h-[80vh] md:overflow-y-hidden overflow-y-auto min-h-[700px] py-5 px-6 flex-col gap-6 rounded-[20px] border border-[#0000001A] ${openFilter ? "flex" : "hidden"} md:flex`}>
             <div className="w-full flex justify-between items-center">
                 <h3 className="text-[20px] font-bold">Filters</h3>
-                <Tune />
+                <div className="hidden md:flex">
+                    <Tune />
+                </div>
+                <button
+                    className="md:hidden flex"
+                    onClick={() => setOpenFilter(false)}
+                >
+                    ✖
+                </button>
             </div>
             <hr className="text-[#0000001A]" />
 
@@ -94,7 +103,12 @@ export default function Filter() {
 
             <hr className="text-[#0000001A]" />
 
-            <Button text={"Apply Filter"} />
+            <div className="md:block hidden">
+                <Button text={"Apply Filter"} style={'max-w-[500px] w-full'} />
+            </div>
+            <button onClick={() => setOpenFilter(prev => !prev)} className={`md:hidden block h-[52px] rounded-[62px] cursor-pointer bg-black text-white hover:bg-white hover:text-black hover:border hover:border-[#0000001A] transition duration-300 ease-in-out`}>
+                Apply Filter
+            </button>
         </div>
     );
 }

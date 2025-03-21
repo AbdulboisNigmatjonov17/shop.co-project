@@ -13,7 +13,7 @@ const Pagination = () => {
     };
 
     return (
-        <div className="w-full flex items-center space-x-2 justify-between mb-10">
+        <div className="w-full flex md:flex-row flex-col md:gap-0 gap-5 items-center space-x-2 justify-between lg:mb-10 mb-14">
             {/* Previous Button */}
             <button
                 onClick={() => handlePageChange(currentPage - 1)}
@@ -24,8 +24,24 @@ const Pagination = () => {
             </button>
 
             {/* Page Numbers */}
-            <div className="flex gap-0.5">
+            <div className="hidden md:flex gap-0.5">
                 {[1, 2, 3, "...", 8, 9, 10].map((page, index) => (
+                    <button
+                        key={index}
+                        onClick={() => typeof page === "number" && handlePageChange(page)}
+                        className={`px-4 py-2 rounded cursor-pointer ${currentPage === page
+                            ? "bg-[#0000000F]"
+                            : "bg-white text-[#00000080] hover:bg-gray-200"
+                            }`}
+                    >
+                        {page}
+                    </button>
+                ))}
+            </div>
+            
+            {/* Sm Page Numbers */}
+            <div className="md:hidden flex gap-0.5">
+                {[1, 2, "...", 9, 10].map((page, index) => (
                     <button
                         key={index}
                         onClick={() => typeof page === "number" && handlePageChange(page)}

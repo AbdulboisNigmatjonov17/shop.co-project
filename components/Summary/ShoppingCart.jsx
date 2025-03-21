@@ -20,15 +20,15 @@ export default function ShoppingCart({ cart }) {
   const total = subtotal - discount + deliveryFee;
 
   return (
-    <Box width={1200} display="flex" gap={4} justifyContent="space-between" p={3}>
+    <Box width={{ sm: '100%', md: '1200px' }} display="flex" gap={4} justifyContent={{ sm: 'center', md: 'space-between' }} p={3} flexWrap={'wrap'}>
       {/* Shopping Cart List */}
       <Box maxWidth={600} p={2} sx={{ border: '1px solid #0000001A', borderRadius: '20px' }}>
         {cart.length > 0 ? (
           cart.map((item, index) => (
-            <Card key={item.id} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 2, borderBottom: index !== cart.length - 1 ? '2px dashed #ddd' : 'none' }}>
+            <Card key={item.id} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', p: 2, borderBottom: index !== cart.length - 1 ? '2px dashed #ddd' : 'none', flexDirection: { xs: 'column', sm: 'column', md: 'row' } }}>
               <Box display="flex" alignItems="center" gap={2}>
                 <Link href={`product-detail/${item.id}`}>
-                  <Avatar src={item.img.main} alt={item.title} sx={{ width: 56, height: 56, borderRadius: 1 }} />
+                  <Avatar src={item.img.main} alt={item.title} sx={{ width: { xs: '100px', sm: '100px', md: '125px' }, height: { xs: '100px', sm: '100px', md: '125px' }, borderRadius: 1 }} />
                 </Link>
                 <Box>
                   <Typography variant="h6">{item.title}</Typography>
@@ -37,7 +37,12 @@ export default function ShoppingCart({ cart }) {
                   <Typography variant="h6" mt={1}>${item.price}</Typography>
                 </Box>
               </Box>
-              <Box display="flex" alignItems="center" gap={2}>
+              <Box
+                display="flex"
+                flexDirection={'row'}
+                alignItems="center"
+                gap={2}
+              >
                 <IconButton onClick={() => dispatch(removeFromCart(item.id))} color="error">
                   <Delete />
                 </IconButton>

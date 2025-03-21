@@ -32,10 +32,8 @@ export default function Cart() {
   }, [cart]);
 
   return (
-    <div>
-      <div className="Container flex justify-between">
-        <ShoppingCart cart={filteredCart} />
-      </div>
-    </div>
+    <section className="md:max-w-[1200px] w-full mx-auto lg:pb-0 pb-10">
+      <ShoppingCart cart={filteredCart} />
+    </section>
   );
 }

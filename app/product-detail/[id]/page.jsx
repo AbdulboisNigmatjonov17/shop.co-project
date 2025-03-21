@@ -35,7 +35,7 @@ export default function Detail() {
       <hr className="Container text-[#0000001A]" />
       <Breadcrumbs />
       {card ? (
-        <div className="Container grid lg:grid-cols-2 grid-cols-1 gap-10 justify-center lg:px-0 px-5">
+        <div className="Container grid lg:grid-cols-2 grid-cols-1 gap-10 justify-center lg:px-0 px-2">
           <div className="w-full flex md:flex-row flex-col-reverse gap-3.5">
             <div className="flex md:flex-col flex-row gap-3.5">
               {["main", "back", "view"].map((key) => (

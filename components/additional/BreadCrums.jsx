@@ -10,7 +10,7 @@ function Breadcrumbs() {
     let currentPath = "";
 
     return (
-        <div className="max-w-[1200px] mx-auto my-10">
+        <div className="max-w-[1200px] mx-auto my-10 lg:px-0 px-5">
             {pathSegments.map((segment, index) => {
                 currentPath += `/${segment}`;
 

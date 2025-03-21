@@ -42,7 +42,7 @@ export default function Navbar() {
 
             {/* Icons */}
             <div className='flex gap-3.5 items-center'>
-                <Link href={'/cart'}>
+                <Link href={'/cart'} aria-label="see to cart">
                     <ShoppingCartOutlined className='cursor-pointer hover:scale-110 transition-transform' />
                 </Link>
                 <AccountCircleOutlined className='cursor-pointer hover:scale-110 transition-transform' />

@@ -19,7 +19,7 @@ export default function CommentCard({ comment }) {
         <div className='relative border border-[#0000001A] rounded-[20px] max-w-[610px] min-h-[200px] py-7 px-8 flex flex-col justify-between ml-5'>
             <div className='w-full flex justify-between'>
                 <StarRating />
-                <button onClick={() => setShowMenu(!showMenu)}>
+                <button onClick={() => setShowMenu(!showMenu)} aria-label="delete button">
                     <MoreHoriz className='cursor-pointer' />
                 </button>
             </div>

@@ -46,9 +46,9 @@ export default function Footer() {
         }
       </div>
       <hr className='max-w-[1200px] mx-auto my-10 text-[#0000001A]' />
-      <div className='Container flex lg:justify-between justify-center lg:gap-0 gap-3 flex-wrap'>
+      <div className='Container flex lg:justify-between justify-center items-center lg:gap-0 gap-3 flex-wrap'>
         <p>Shop.co © 2000-2023, All Rights Reserved</p>
-        <div className='flex gap-5'>
+        <div className='flex lg:gap-5 gap-2'>
           <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/Visa.png" alt="VisaCard" />
           <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/Mastercard.png" alt="MasterCard" />
           <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/PayPal.png" alt="PayPalCard" />

@@ -35,26 +35,26 @@ export default function Detail() {
       <hr className="Container text-[#0000001A]" />
       <Breadcrumbs />
       {card ? (
-        <div className="Container flex gap-10">
-          <div className="w-[50%] flex gap-3.5">
-            <div className="flex flex-col gap-3.5">
+        <div className="Container grid lg:grid-cols-2 grid-cols-1 gap-10 justify-center lg:px-0 px-5">
+          <div className="w-full flex md:flex-row flex-col-reverse gap-3.5">
+            <div className="flex md:flex-col flex-row gap-3.5">
               {["main", "back", "view"].map((key) => (
                 <button key={key} onClick={() => setImg(card.img[key])} className="cursor-pointer">
-                  <img src={card.img[key]} alt={`product image ${key}`} className="rounded-[20px] w-[150px] h-[165px] mix-blend-multiply"/>
+                  <img src={card.img[key]} alt={`product image ${key}`} className="rounded-[20px] md:w-[150px] w-[110px] md:h-[165px] h-[105px] object-cover" />
                 </button>
               ))}
             </div>
-            <div className="rounded-[20px] overflow-hidden">
+            <div className="">
               {img ? (
-                <img src={img} alt="product image" className="w-[444px] h-[530px] object-cover" />
+                <img src={img} alt="product image" className="rounded-[20px] md:w-[444px] w-[360px] md:h-[530px] h-[290px] object-cover" />
               ) : (
-                <div className="bg-[#F0F0F0] w-[444px] h-[530px] flex justify-center items-center">
+                <div className="bg-[#F0F0F0] rounded-[20px] md:w-[444px] w-[360px] md:h-[530px] h-[290px] flex justify-center items-center">
                   <h2 className="text-2xl font-semibold">Select one</h2>
                 </div>
               )}
             </div>
           </div>
-          <div className="w-[50%] flex flex-col gap-5">
+          <div className="w-full flex flex-col gap-5">
             <h2 className="font-bold text-[40px]">{card.title}</h2>
             <StarRating />
             <div className="flex items-center gap-2.5">
@@ -91,7 +91,7 @@ export default function Detail() {
             <hr className="text-[#0000001A]" />
             <div className="w-full flex flex-col gap-4">
               <h3>Choose Size</h3>
-              <div className="w-full flex gap-3">
+              <div className="w-full flex flex-wrap gap-3">
                 {[
                   { id: 1, text: "Small" },
                   { id: 2, text: "Medium" },
@@ -129,7 +129,7 @@ export default function Detail() {
         <p>Product not found</p>
       )}
       <div className="Container">
-        <Details data={card} />
+        {/* <Details data={card} /> */}
       </div>
       <SameProducts text={"You might also like"} />
     </section>

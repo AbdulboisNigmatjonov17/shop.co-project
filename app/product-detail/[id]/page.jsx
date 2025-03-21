@@ -40,13 +40,13 @@ export default function Detail() {
             <div className="flex flex-col gap-3.5">
               {["main", "back", "view"].map((key) => (
                 <button key={key} onClick={() => setImg(card.img[key])} className="cursor-pointer">
-                  <Image width={150} height={170} src={card.img[key]} alt={`product image ${key}`} />
+                  <img src={card.img[key]} alt={`product image ${key}`} className="rounded-[20px] w-[150px] h-[165px] mix-blend-multiply"/>
                 </button>
               ))}
             </div>
             <div className="rounded-[20px] overflow-hidden">
               {img ? (
-                <Image width={444} height={530} src={img} alt="product image" className="object-cover" />
+                <img src={img} alt="product image" className="w-[444px] h-[530px] object-cover" />
               ) : (
                 <div className="bg-[#F0F0F0] w-[444px] h-[530px] flex justify-center items-center">
                   <h2 className="text-2xl font-semibold">Select one</h2>
@@ -55,7 +55,7 @@ export default function Detail() {
             </div>
           </div>
           <div className="w-[50%] flex flex-col gap-5">
-            <h2>{card.title}</h2>
+            <h2 className="font-bold text-[40px]">{card.title}</h2>
             <StarRating />
             <div className="flex items-center gap-2.5">
               <h3 className="font-bold text-2xl">${card.price}</h3>
@@ -68,7 +68,7 @@ export default function Detail() {
                 </>
               )}
             </div>
-            <p>{card.about}</p>
+            <p className="text-[16px] font-normal text-[#00000099]">{card.about}</p>
             <hr className="text-[#0000001A]" />
             <div className="w-full flex flex-col gap-4">
               <h3>Select Colors</h3>

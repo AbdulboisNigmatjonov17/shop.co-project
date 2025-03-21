@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import StarRating from '../star/Star'
 
 export default function ProductDard({ data }) {
     return (
@@ -24,8 +25,7 @@ export default function ProductDard({ data }) {
             <div className="flex flex-col gap-2">
                 <h3 className="font-bold text-xl">{data.title}</h3>
                 <div className="flex gap-3">
-                    <img src="/stars.png" alt="star" />
-                    <p>{data.star}/<span className="text-[#00000099]">5</span></p>
+                    <StarRating />
                 </div>
                 <div className="flex items-center gap-2.5">
                     <h3 className="font-bold text-2xl">${data.price}</h3>

@@ -9,9 +9,9 @@ import Form from './Form'
 export default function Footer() {
   return (
     <footer className='w-full bg-[#F0F0F0] pt-40 pb-10 mt-20 text-[#00000099]'>
-      <div className='Container min-h-[175px] flex flex-wrap justify-between relative '>
+      <div className='Container min-h-[175px] flex flex-wrap justify-between relative lg:gap-0 gap-5 lg:px-0 px-5'>
         <Form />
-        <div className='w-[250px] h-full flex flex-col justify-between gap-10'>
+        <div className='w-[250px] h-full flex flex-col justify-between lg:gap-10 gap-5'>
           <Link href={'/'}>
             <Image width={165} priority height={25} src="/SHOP.CO.svg" alt="Logo" />
           </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
         }
       </div>
       <hr className='max-w-[1200px] mx-auto my-10 text-[#0000001A]' />
-      <div className='Container flex justify-between'>
+      <div className='Container flex lg:justify-between justify-center lg:gap-0 gap-3 flex-wrap'>
         <p>Shop.co © 2000-2023, All Rights Reserved</p>
         <div className='flex gap-5'>
           <Image width={70} height={50} className='cursor-pointer hover:scale-110' src="/cards/Visa.png" alt="VisaCard" />

@@ -31,7 +31,7 @@ Loyihada quyidagi texnologiyalar ishlatilgan:
 - **@tailwindcss/postcss** – Tailwind CSS uchun konfiguratsiya
 - **eslint-config-next** – Next.js bilan ESLint ishlatish uchun
 
-### **Hosting*
+### **Hosting**
 - **Vercel** - loyihani hosting qlishchun foydalandim
 
 ---

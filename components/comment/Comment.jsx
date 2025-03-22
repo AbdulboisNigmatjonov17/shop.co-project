@@ -11,7 +11,6 @@ export default function Comment() {
     const [showAll, setShowAll] = useState(false);
     const [showInput, setShowInput] = useState(false)
 
-    // 🔹 Firestore’dan commentlarni real-time olish
     useEffect(() => {
         const q = query(collection(db, "comments"));
 
@@ -27,7 +26,6 @@ export default function Comment() {
         return () => unsubscribe();
     }, []);
 
-    // 🔹 Firestore’ga yangi comment qo‘shish
     const addComment = async () => {
         if (!newComment.trim()) return;
 
@@ -36,7 +34,7 @@ export default function Comment() {
         };
 
         await addDoc(collection(db, "comments"), newCommentData);
-        setNewComment(""); // Inputni tozalash
+        setNewComment("");
     };
 
     const handleShowInput = () => {
@@ -54,8 +52,6 @@ export default function Comment() {
                     <button onClick={handleShowInput} className="border border-[#0000001A] bg-black hover:bg-white text-white hover:text-black w-[165px] h-[50px] flex justify-center items-center rounded-full cursor-pointer transition duration-300 ease-in-out">Write Review</button>
                 </div>
             </div>
-
-            {/* Yangi comment qo‘shish */}
             {
                 showInput ?
                     <div className="flex gap-3 mt-3">
@@ -72,15 +68,11 @@ export default function Comment() {
                     </div>
                     : null
             }
-
-            {/* Commentlar ro‘yxati */}
             <div className="w-full mt-5 grid grid-cols-2 gap-5">
                 {(showAll ? comments : comments.slice(0, 4)).map((comment) => (
                     <CommentCard key={comment.id} comment={comment} />
                 ))}
             </div>
-
-            {/* Show all / Show less tugmalari */}
             <div className="w-full flex justify-center my-5">
                 {comments.length > 3 && (
                     <button onClick={() => setShowAll(!showAll)} className="border border-[#0000001A] hover:bg-black hover:text-white w-[230px] h-[50px] flex justify-center items-center rounded-full cursor-pointer transition duration-300 ease-in-out">

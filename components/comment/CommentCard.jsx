@@ -13,7 +13,7 @@ export default function CommentCard({ comment }) {
     });
     const handleDelete = async () => {
         await deleteDoc(doc(db, "comments", comment.id));
-        setShowMenu(false); // O‘chirgandan keyin menyuni yopamiz
+        setShowMenu(false); 
     };
     return (
         <div className='relative border border-[#0000001A] rounded-[20px] max-w-[610px] min-h-[200px] py-7 px-8 flex flex-col justify-between ml-5'>

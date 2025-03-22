@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 function Breadcrumbs() {
-    const pathname = usePathname(); // Faqat URL yo‘lini olish
+    const pathname = usePathname();
     const pathSegments = pathname.split("/").filter((segment) => segment !== "");
 
     let currentPath = "";

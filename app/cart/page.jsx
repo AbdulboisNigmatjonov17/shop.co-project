@@ -20,13 +20,12 @@ export default function Cart() {
   }, [dispatch]);
 
   useEffect(() => {
-    // `cart` dagi mahsulotlarni `CardData` bilan id bo‘yicha solishtirish
     const updatedCart = cart
       .map((item) => {
         const product = CardData.find((p) => p.id === item.id);
         return product ? { ...product, quantity: item.quantity } : null;
       })
-      .filter(Boolean); // `null` bo'lgan mahsulotlarni o‘chirib tashlash
+      .filter(Boolean); 
 
     setFilteredCart(updatedCart);
   }, [cart]);

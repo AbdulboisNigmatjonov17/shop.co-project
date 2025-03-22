@@ -13,7 +13,6 @@ export default function Filter({ setOpenFilter, openFilter }) {
     const [openDressStyle, setOpenDressStyle] = useState(false);
 
     return (
-        // <div className={`md:w-[20%] w-full scroll-auto md:flex sm:max-h-[80vh] sm:overflow-y-auto min-h-[700px] py-5 px-6 flex-col gap-6 rounded-[20px] border border-[#0000001A] ${openFilter ? "flex" : "hidden"} md:flex`}>
         <div className={`md:w-[20%] w-full md:flex md:max-h-full sm:max-h-[80vh] md:overflow-y-hidden overflow-y-auto min-h-[700px] py-5 px-6 flex-col gap-6 rounded-[20px] border border-[#0000001A] ${openFilter ? "flex" : "hidden"} md:flex`}>
             <div className="w-full flex justify-between items-center">
                 <h3 className="text-[20px] font-bold">Filters</h3>
@@ -28,7 +27,6 @@ export default function Filter({ setOpenFilter, openFilter }) {
                 </button>
             </div>
             <hr className="text-[#0000001A]" />
-
             <div className="w-full flex flex-col gap-5 text-[#00000099]">
                 {["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"].map((item, index) => (
                     <div key={index} className="w-full flex justify-between items-center">
@@ -37,10 +35,7 @@ export default function Filter({ setOpenFilter, openFilter }) {
                     </div>
                 ))}
             </div>
-
             <hr className="text-[#0000001A]" />
-
-            {/* Price Filter */}
             <details open={openPrice}>
                 <summary className="w-full flex justify-between items-center cursor-pointer" onClick={() => setOpenPrice(!openPrice)}>
                     <h3 className="text-lg font-semibold">Price</h3>
@@ -48,10 +43,7 @@ export default function Filter({ setOpenFilter, openFilter }) {
                 </summary>
                 <PriceRangeSlider />
             </details>
-
             <hr className="text-[#0000001A]" />
-
-            {/* Colors Filter */}
             <details open={openColors}>
                 <summary className="w-full flex justify-between items-center cursor-pointer" onClick={() => setOpenColors(!openColors)}>
                     <h3 className="text-lg font-semibold">Colors</h3>
@@ -59,10 +51,7 @@ export default function Filter({ setOpenFilter, openFilter }) {
                 </summary>
                 <Colors />
             </details>
-
             <hr className="text-[#0000001A]" />
-
-            {/* Sizes Filter */}
             <details open={openSizes}>
                 <summary className="w-full flex justify-between items-center cursor-pointer" onClick={() => setOpenSizes(!openSizes)}>
                     <h3 className="text-lg font-semibold">Sizes</h3>
@@ -70,10 +59,7 @@ export default function Filter({ setOpenFilter, openFilter }) {
                 </summary>
                 <Sizes />
             </details>
-
             <hr className="text-[#0000001A]" />
-
-            {/* Dress Style Filter */}
             <details open={openDressStyle}>
                 <summary className="w-full flex justify-between items-center cursor-pointer" onClick={() => setOpenDressStyle(!openDressStyle)}>
                     <h3 className="text-lg font-semibold">Dress Style</h3>
@@ -100,9 +86,7 @@ export default function Filter({ setOpenFilter, openFilter }) {
                     </div>
                 </div>
             </details>
-
             <hr className="text-[#0000001A]" />
-
             <div className="md:block hidden">
                 <Button text={"Apply Filter"} style={'max-w-[500px] w-full'} />
             </div>

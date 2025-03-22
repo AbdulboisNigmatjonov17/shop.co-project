@@ -3,7 +3,7 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { useState } from "react";
 
 const Pagination = () => {
-    const totalPages = 10; // Jami sahifalar soni
+    const totalPages = 10; 
     const [currentPage, setCurrentPage] = useState(1);
 
     const handlePageChange = (page) => {
@@ -14,7 +14,6 @@ const Pagination = () => {
 
     return (
         <div className="w-full flex md:flex-row flex-col md:gap-0 gap-5 items-center space-x-2 justify-between lg:mb-10 mb-14">
-            {/* Previous Button */}
             <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
@@ -22,8 +21,6 @@ const Pagination = () => {
             >
                 <ArrowBack /> Previous
             </button>
-
-            {/* Page Numbers */}
             <div className="hidden md:flex gap-0.5">
                 {[1, 2, 3, "...", 8, 9, 10].map((page, index) => (
                     <button
@@ -38,8 +35,6 @@ const Pagination = () => {
                     </button>
                 ))}
             </div>
-            
-            {/* Sm Page Numbers */}
             <div className="md:hidden flex gap-0.5">
                 {[1, 2, "...", 9, 10].map((page, index) => (
                     <button
@@ -54,8 +49,6 @@ const Pagination = () => {
                     </button>
                 ))}
             </div>
-
-            {/* Next Button */}
             <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}

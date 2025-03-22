@@ -5,7 +5,7 @@ const getInitialCart = () => {
         const savedCart = localStorage.getItem("cart");
         return savedCart ? JSON.parse(savedCart) : [];
     }
-    return []; // SSR vaqtida bo'sh array qaytariladi
+    return []; 
 };
 
 
@@ -43,7 +43,6 @@ const cartSlice = createSlice({
             if (existingItem) {
                 existingItem.quantity += amount;
         
-                // Quantity 1 dan kichik bo‘lsa, o‘chirib tashlash
                 if (existingItem.quantity < 1) {
                     state.cart = state.cart.filter((item) => item.id !== id);
                 }

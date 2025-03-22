@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-// import Reviews from "./Reviews";
 import Faqs from "./Faqs";
 import ProductDetail from "./ProductDetail";
 import Comment from "../comment/Comment";
@@ -30,8 +29,6 @@ export default function Details({ data }) {
                     </button>
                 ))}
             </div>
-
-            {/* Tab content */}
             <div className="p-6 text-center">
                 {activeTab === "details" && <ProductDetail />}
                 {activeTab === "reviews" && <Comment />}
